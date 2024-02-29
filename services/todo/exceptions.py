@@ -1,0 +1,2 @@
+class ErrorTodosAPI(Exception):
+    pass
