@@ -4,13 +4,8 @@ import pytest
 
 def test_0_success_get_todos_defalt():
     response = fetch_todos()
-    assert len(response) == 5
-    assert isinstance(response, list)
-
-def test_0_success_get_todos_limit():
-    response = fetch_todos(limit=1)
-    assert len(response) == 1
-    assert isinstance(response, list)
+    assert isinstance(response, dict)
+    assert response['status_code'] == 200
 
 def test_1_error_todos():
     with pytest.raises(ErrorTodosAPI) as excinfo:  
