@@ -9,6 +9,7 @@ COPY ./requirements /code/requirements
 RUN pip install -r /code/requirements/dev.txt
 
 COPY ./src /code/src
+COPY ./services /code/services
 COPY ./environments/default.env /code/environments/default.env
 
 COPY setup.cfg /code/
