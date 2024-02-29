@@ -1,0 +1,14 @@
+fastapi
+gunicorn
+uvicorn
+python-dotenv
+sqlalchemy
+psycopg2-binary
+fastapi-cache2[redis]
+httpx
+pytest
+pytest-asyncio
+coverage
+bcrypt
+python-jose
+databases
