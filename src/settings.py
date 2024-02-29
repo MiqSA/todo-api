@@ -1,0 +1,25 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv('environments/default.env')
+
+# Token
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv('ACCESS_TOKEN_EXPIRE_MINUTES'))
+REFRESH_TOKEN_EXPIRE_MINUTES = int(os.getenv('REFRESH_TOKEN_EXPIRE_MINUTES'))
+ALGORITHM = os.getenv('ALGORITHM')
+JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY')
+JWT_REFRESH_SECRET_KEY = os.getenv('JWT_REFRESH_SECRET_KEY')
+
+# Database Settings 
+DATABASE_NAME = os.getenv('POSTGRES_DB')
+DATABASE_USER = os.getenv('POSTGRES_USER')
+DATABASE_PASSWORD = os.getenv('POSTGRES_PASSWORD')
+DATABASE_HOST = os.getenv('POSTGRES_HOST')
+DATABASE_PORT =  os.getenv('POSTGRES_PORT')
+DATABASE_ENGINE = os.getenv('DATABASE_ENGINE')
+
+# DB_URL = f"{DATABASE_ENGINE}://{DATABASE_USER}:{DATABASE_PASSWORD}@{DATABASE_HOST}:{DATABASE_PORT}/{DATABASE_NAME}"
+DB_URL = "sqlite:///todo.db"
+
+# Services
+API_URL = os.getenv('API_URL')
