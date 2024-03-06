@@ -3,7 +3,7 @@ version: '3.9'
 services:
 
   db_todo:
-    container_name: DB
+    container_name: DB_todo_api
     image: postgres:14.1
     restart: always
     env_file:
@@ -22,7 +22,7 @@ services:
     build:
       dockerfile: api.dockerfile
       context: ../
-    container_name: api
+    container_name: todo_api
     ports:
       - "8010:8000"
     volumes:
